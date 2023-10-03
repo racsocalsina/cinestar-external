@@ -140,5 +140,6 @@ class HeadquarterController extends Controller
         $this->headquarterRepository->delete($headquarters);
         return $this->successResponse([]);
     }
+    /* lunes */
 
 }
