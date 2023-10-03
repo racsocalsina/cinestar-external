@@ -141,5 +141,6 @@ class HeadquarterController extends Controller
         return $this->successResponse([]);
     }
     /* lunes */
+    /* ingresando martes desde pc local*/
 
 }
