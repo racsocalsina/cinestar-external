@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddNameAbbrToProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('name_abbr', 20);
+        });
+        Schema::table('combos', function (Blueprint $table) {
+            $table->string('name_abbr', 20);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('name_abbr');
+        });
+        Schema::table('combos', function (Blueprint $table) {
+            $table->dropColumn('name_abbr');
+        });
+    }
+}
